@@ -1,0 +1,116 @@
+:root{--blue-950:#071a3c;--blue-900:#0c2859;--blue-700:#1757bb;--blue-600:#2563eb;--blue-100:#eaf2ff;--ink:#112443;--muted:#687994;--line:#dce6f3}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#e9f1fc;color:var(--ink);font-family:'DM Sans',sans-serif}button,input{font:inherit}.auth-layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(430px,.87fr);max-width:1320px;min-height:min(760px,calc(100dvh - 72px));margin:36px auto;background:#fff;border:1px solid #dce6f5;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px rgba(17,51,105,.14)}.identity-panel{position:relative;isolation:isolate;display:flex;flex-direction:column;overflow:hidden;padding:40px 48px 35px;background:radial-gradient(circle at 95% 85%,#2663c9 0%,transparent 43%),linear-gradient(145deg,#0d326d 0%,#071b40 75%);color:white}.identity-panel:after{position:absolute;content:"";width:500px;height:500px;right:-190px;bottom:-250px;border:1px solid rgba(255,255,255,.1);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.035),0 0 0 150px rgba(255,255,255,.025);pointer-events:none;z-index:-1}.identity-grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,transparent 0%,black 90%)}.brand-bar{display:flex;align-items:center;gap:13px}.brand-emblem{height:51px;width:51px;flex:0 0 51px;background:white;border-radius:50%;padding:3px;box-shadow:0 3px 16px rgba(0,0,0,.13)}.brand-emblem img{display:block;width:100%;height:100%;object-fit:contain}.brand-emblem.college{height:44px;width:44px;flex-basis:44px}.brand-copy{display:flex;flex-direction:column;font-family:Manrope,sans-serif;letter-spacing:.08em;gap:3px;line-height:1.25}.brand-copy strong{font-size:.82rem;font-weight:800}.brand-copy span{font-size:.65rem;font-weight:600;letter-spacing:.15em;color:#bad4ff}.brand-divider{height:35px;width:1px;background:rgba(255,255,255,.22);margin-left:10px;margin-right:5px}.identity-content{margin:auto 0;padding:52px 0}.identity-kicker{display:flex;align-items:center;gap:12px;font-size:.7rem;letter-spacing:.19em;font-weight:800;color:#c9ddff}.kicker-line{height:2px;width:30px;background:#67b4ff}.identity-content h1{font-family:Manrope,sans-serif;font-size:clamp(2.4rem,3.4vw,4.25rem);letter-spacing:-.065em;font-weight:800;line-height:1.17;margin:22px 0 22px}.identity-content h1 span{color:#8ac3ff}.identity-content p{max-width:480px;color:#c8daf4;line-height:1.8;font-size:.94rem;margin:0}.identity-points{display:grid;gap:18px;margin-top:35px}.identity-point{display:flex;align-items:center;gap:12px;color:#e7f0ff;font-size:.85rem;font-weight:600}.point-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:11px;border:1px solid rgba(143,201,255,.25);background:rgba(149,192,255,.12);color:#99ccff;font-size:1.05rem}.identity-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#b6ccec;font-size:.66rem;letter-spacing:.045em;font-weight:700}.identity-status{display:flex;align-items:center;gap:10px}.pulse-dot{background:#4de0b1;height:7px;width:7px;border-radius:50%;box-shadow:0 0 0 4px rgba(77,224,177,.13)}.form-panel{padding:41px 48px 30px;display:flex;flex-direction:column;min-width:0}.form-topline{display:flex;align-items:center;gap:9px;font-size:.68rem;letter-spacing:.12em;font-weight:800;color:#5c7498}.mini-shield{width:27px;height:27px;border-radius:8px;background:#eaf2ff;display:grid;place-items:center;color:#1d5fc3;font-size:.95rem}.form-inner{max-width:385px;width:100%;margin:auto; padding:56px 0}.welcome-icon{width:55px;height:55px;border-radius:17px;background:#eaf2ff;display:grid;place-items:center;color:#1d5fc3;font-size:1.5rem;margin-bottom:24px}.form-inner h2{font-family:Manrope,sans-serif;font-size:clamp(1.8rem,2.4vw,2.3rem);letter-spacing:-.055em;margin:0 0 10px;font-weight:800}.intro{font-size:.9rem;line-height:1.75;color:var(--muted);margin:0 0 34px;max-width:360px}.field{margin-bottom:22px}.field label{display:block;font-size:.81rem;font-weight:800;margin-bottom:9px;color:#243858}.input-wrap{height:52px;display:flex;align-items:center;gap:12px;border:1.5px solid #dce5f1;border-radius:12px;background:#fbfdff;transition:.18s;overflow:hidden}.input-wrap:focus-within{border-color:#3477e9;box-shadow:0 0 0 4px rgba(52,119,233,.11);background:#fff}.input-icon{padding-left:16px;color:#8292ac;font-size:1.05rem}.input-wrap input{width:100%;flex:1;min-width:0;border:0;outline:0;background:transparent;color:#142b50;font-size:.88rem;height:100%;padding:0 13px 0 0}.input-wrap input::placeholder{color:#9aa9bc}.reveal-button{border:0;background:transparent;color:#7185a2;cursor:pointer;padding:12px 16px;display:grid;place-items:center}.reveal-button:hover{color:#205bcc}.submit-button{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:54px;background:#1b60d1;color:white;border:1px solid #1b60d1;border-radius:12px;cursor:pointer;font-size:.9rem;font-weight:800;margin-top:32px;box-shadow:0 10px 22px rgba(28,100,213,.22);transition:background .18s,transform .18s,box-shadow .18s}.submit-button:hover{background:#154fac;transform:translateY(-1px);box-shadow:0 12px 26px rgba(28,100,213,.27)}.submit-button:disabled{opacity:.67;cursor:wait;transform:none}.access-help{display:flex;gap:9px;align-items:flex-start;margin-top:27px;padding:14px 16px;background:#f4f8fd;border:1px solid #e6edf6;border-radius:12px;font-size:.76rem;line-height:1.65;color:#687c97}.access-help i{color:#2e6ac7;font-size:.92rem;margin-top:1px}.auth-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.67rem;color:#8492a7}.login-alert{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid #fecaca;background:#fff4f4;border-radius:10px;color:#a52235;font-size:.82rem;margin-bottom:21px;line-height:1.5}.login-alert i{margin-top:1px}button:focus-visible{outline:3px solid #76a8f8;outline-offset:3px}@media(max-width:900px){.auth-layout{margin:18px;grid-template-columns:minmax(0,1fr) minmax(390px,1fr);min-height:calc(100dvh - 36px)}.identity-panel{padding:32px 28px}.form-panel{padding:32px 30px}.identity-content h1{font-size:2.6rem}.identity-footer>span:last-child{display:none}}@media(max-width:700px){body{background:#fff}.auth-layout{margin:0;border-radius:0;display:flex;flex-direction:column;min-height:100dvh;border:0;box-shadow:none}.identity-panel{padding:19px 24px 23px;min-height:0}.identity-content{padding:22px 0 0}.identity-content h1{font-size:1.4rem;line-height:1.3;letter-spacing:-.035em;margin:8px 0 0}.identity-content h1 br{display:none}.identity-content h1 span{color:#a5d1ff}.identity-content p,.identity-points,.identity-footer,.identity-kicker{display:none}.brand-emblem{width:42px;height:42px;flex-basis:42px}.brand-emblem.college{width:38px;height:38px;flex-basis:38px}.brand-copy strong{font-size:.72rem}.brand-copy span{font-size:.57rem}.form-panel{padding:26px 25px;flex:1}.form-inner{padding:32px 0 44px}.welcome-icon{width:48px;height:48px;margin-bottom:17px}.form-topline{font-size:.62rem}.intro{margin-bottom:28px}.auth-footer{justify-content:center;text-align:center}.auth-footer span+span{display:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* RBAC officer recovery dialog: stays consistent with the NISU blue login. */
+.password-label-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}.forgot-link{color:#195dc5;border:0;background:none;font-size:.78rem;font-weight:800;cursor:pointer;padding:0 0 8px}.forgot-link:hover{text-decoration:underline}.reset-dialog{border:1px solid #dce8fa;border-radius:22px;max-width:min(470px,calc(100vw - 28px));width:100%;max-height:calc(100dvh - 30px);overflow:auto;background:#fff;color:#162d50;padding:30px;box-shadow:0 28px 100px rgba(6,24,62,.28)}.reset-dialog::backdrop{background:rgba(4,19,44,.65);backdrop-filter:blur(5px)}.reset-dialog-head{display:flex;justify-content:space-between;align-items:center}.reset-icon{display:grid;place-items:center;width:48px;height:48px;color:#1b60d1;border-radius:14px;background:#eaf2ff;font-size:1.35rem}.reset-close{background:#f3f7fd;border:0;border-radius:10px;width:36px;height:36px;cursor:pointer;color:#3f587a}.reset-dialog h2{font-family:Manrope,sans-serif;font-size:1.5rem;margin:16px 0 8px}.reset-subtitle{font-size:.84rem;color:#687994;line-height:1.65;margin:0 0 18px}.reset-tabs{display:flex;gap:6px;padding:5px;background:#edf4ff;border-radius:11px;margin-bottom:20px}.reset-tabs button{flex:1;border:0;background:transparent;color:#536b8e;padding:10px 7px;font-weight:750;border-radius:8px;cursor:pointer;font-size:.8rem}.reset-tabs button.active{background:#fff;color:#1457bb;box-shadow:0 2px 7px rgba(10,55,119,.12)}.reset-label{display:block;font-size:.78rem;font-weight:800;margin:12px 0 7px;color:#243858}.reset-muted{font-weight:500;color:#8495ac}.reset-input{width:100%;padding:12px 13px;color:#152c50;background:#fbfdff;border:1.5px solid #dce6f3;border-radius:10px;font-size:.88rem}.reset-input:focus{outline:0;border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.12)}.reset-code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.015em;font-size:.78rem}.reset-hint{display:flex;gap:9px;font-size:.75rem;line-height:1.6;background:#f3f7fd;padding:12px;border-radius:10px;color:#607593;margin:18px 0}.reset-hint i{color:#2563eb}.reset-submit{margin:15px 0 0;min-height:48px}.reset-feedback{padding:12px 14px;border:1px solid #badad1;background:#edf9f4;border-radius:10px;color:#176c51;font-size:.81rem;line-height:1.55;margin:0 0 12px}.reset-feedback.is-error{border-color:#f4bec8;background:#fff1f3;color:#a32746}#resetRequestForm[hidden],#resetRedeemForm[hidden],#resetFeedback[hidden]{display:none!important}@media(max-width:600px){.reset-dialog{padding:23px 19px}}
+
+
+/* ------------------------------------------------------
+   CICS campus-photo login redesign (preserves recovery UI)
+   ------------------------------------------------------ */
+.auth-layout {
+    min-height: min(800px, calc(100dvh - 56px));
+    margin: 28px auto;
+}
+.identity-panel {
+    background: linear-gradient(155deg, #123a78 0%, #081e48 100%);
+    padding: 28px;
+    gap: 22px;
+}
+.identity-panel::after { display: none; }
+.brand-bar { padding: 8px 9px 0; flex-shrink: 0; }
+.campus-photo-card {
+    position: relative;
+    isolation: isolate;
+    flex: 1;
+    min-height: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #102e62;
+    border: 1px solid rgba(221, 236, 255, .24);
+    box-shadow: 0 20px 42px rgba(0, 10, 33, .25);
+}
+.campus-photo {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 62%;
+}
+.campus-photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(24px, 3.3vw, 43px);
+    background: linear-gradient(180deg, rgba(4, 17, 45, .05) 8%, rgba(4, 17, 45, .04) 34%, rgba(5, 19, 48, .64) 73%, rgba(3, 13, 37, .94) 100%);
+}
+.campus-photo-eyebrow {
+    font-size: .68rem;
+    letter-spacing: .16em;
+    font-weight: 800;
+    color: #a5ceff;
+    margin-bottom: 11px;
+}
+.campus-photo-overlay h1 {
+    font-family: Manrope, sans-serif;
+    font-size: clamp(1.55rem, 2.6vw, 2.45rem);
+    line-height: 1.24;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    color: #fff;
+    margin: 0 0 10px;
+    text-wrap: balance;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .18);
+}
+.campus-photo-overlay p {
+    margin: 0;
+    color: #daeaff;
+    line-height: 1.6;
+    font-size: .88rem;
+    font-weight: 500;
+}
+.identity-footer { padding: 0 7px; }
+.forgot-password-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.forgot-password-row .forgot-link {
+    padding: 3px 0;
+    font-size: .8rem;
+    line-height: 1.6;
+    text-underline-offset: 3px;
+}
+.forgot-password-row .forgot-link:focus-visible { border-radius: 4px; }
+/* Add breathing room beneath the relocated recovery link. */
+#loginForm .field:has(.forgot-password-row) { margin-bottom: 25px; }
+#loginForm > .submit-button { margin-top: 0; }
+@media (max-width: 900px) {
+    .auth-layout { margin: 18px; min-height: calc(100dvh - 36px); }
+    .identity-panel { padding: 20px; gap: 16px; }
+    .campus-photo-card { min-height: 430px; }
+    .campus-photo-overlay { padding: 25px; }
+    .campus-photo-overlay h1 { font-size: 1.7rem; }
+}
+@media (max-width: 700px) {
+    .auth-layout { margin: 0; min-height: 100dvh; }
+    .identity-panel { padding: 18px 20px; gap: 14px; }
+    .brand-bar { padding: 0; }
+    .campus-photo-card { flex: none; height: 218px; min-height: 218px; border-radius: 13px; }
+    .campus-photo { object-position: center 59%; }
+    .campus-photo-overlay { padding: 18px 20px; }
+    .campus-photo-eyebrow { font-size: .58rem; margin-bottom: 6px; }
+    .campus-photo-overlay h1 { font-size: 1.24rem; line-height: 1.24; margin-bottom: 5px; }
+    .campus-photo-overlay p { font-size: .72rem; }
+    .identity-footer { display: none; }
+    .form-panel { padding: 25px; }
+    .form-inner { padding: 28px 0 40px; }
+}
+@media (max-width: 390px) {
+    .campus-photo-card { height: 185px; min-height: 185px; }
+    .campus-photo-overlay h1 { font-size: 1.08rem; }
+    .brand-copy strong { font-size: .63rem; }
+}

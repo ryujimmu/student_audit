@@ -1,0 +1,524 @@
+#auditRegisterView {
+    --ink: #172c4d;
+    --muted: #657894;
+    --primary: #2162d2;
+    --line: #e1e9f4;
+    --canvas: #f3f7fd;
+
+    margin: 0;
+    min-width: 0;
+    background: transparent;
+    color: var(--ink);
+    font: 14px/1.6 Inter, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#auditRegisterView * {
+    box-sizing: border-box;
+}
+
+#auditRegisterView a {
+    color: var(--primary);
+}
+
+#auditRegisterView button,
+#auditRegisterView input,
+#auditRegisterView textarea {
+    font: inherit;
+}
+
+#auditRegisterView button,
+#auditRegisterView a,
+#auditRegisterView input,
+#auditRegisterView textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#auditRegisterView button:focus-visible,
+#auditRegisterView a:focus-visible,
+#auditRegisterView input:focus-visible,
+#auditRegisterView textarea:focus-visible {
+    outline: 3px solid #8dbfff;
+    outline-offset: 3px;
+}
+
+/* Page heading */
+
+#auditRegisterView .page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+#auditRegisterView .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #336fca;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+#auditRegisterView .eyebrow::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #5296ed;
+}
+
+#auditRegisterView .page-heading h1 {
+    color: var(--ink);
+    font-size: clamp(23px, 2vw, 31px);
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+#auditRegisterView .page-heading p {
+    color: #70829b;
+    font-size: 13px;
+    margin: 0;
+    max-width: 760px;
+}
+
+#auditRegisterView .page-heading > .button {
+    flex-shrink: 0;
+}
+
+/* Buttons */
+
+#auditRegisterView button,
+#auditRegisterView .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-height: 39px;
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    border-radius: 9px;
+    padding: 9px 14px;
+    font: 700 12px/1.5 Inter, system-ui, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+#auditRegisterView button:hover,
+#auditRegisterView .button:hover {
+    background: #164ca9;
+    border-color: #164ca9;
+    box-shadow: 0 5px 13px #2460d12e;
+}
+
+#auditRegisterView .secondary {
+    background: white;
+    color: #2064cd;
+    border-color: #cbdcf3;
+}
+
+#auditRegisterView .secondary:hover {
+    background: #edf4ff;
+    color: #164ca9;
+    border-color: #82afea;
+    box-shadow: none;
+}
+
+#auditRegisterView button:disabled {
+    opacity: 0.48;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Status messages */
+
+#auditRegisterView .status {
+    margin: 0 0 18px;
+    border-radius: 10px;
+    white-space: pre-line;
+    font-size: 12px;
+}
+
+#auditRegisterView .status:empty {
+    display: none;
+}
+
+#auditRegisterView .status:not(:empty) {
+    padding: 11px 15px;
+    border: 1px solid #d7e5f9;
+    background: #eaf2fd;
+    color: #345b91;
+}
+
+#auditRegisterView .status.error {
+    background: #fff0f2;
+    color: #ad304a;
+    border-color: #f3ccd3;
+}
+
+/* Register panel */
+
+#auditRegisterView .panel {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    box-shadow: 0 4px 24px #1136690b;
+    overflow: hidden;
+}
+
+#auditRegisterView .register-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 23px 24px 18px;
+}
+
+#auditRegisterView .register-heading h2 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+#auditRegisterView .hint {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 5px 0 0;
+}
+
+#auditRegisterView .table-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#auditRegisterView .register-guide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 13px 24px;
+    background: #f8fbff;
+    border-top: 1px solid #edf2fa;
+    border-bottom: 1px solid #e1eaf7;
+}
+
+#auditRegisterView .register-guide p {
+    font-size: 11px;
+    color: #627897;
+    margin: 0;
+}
+
+#auditRegisterView .inline-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 11px;
+    color: #597393;
+    font-weight: 600;
+}
+
+#auditRegisterView .inline-label input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: var(--primary);
+}
+
+/* Table */
+
+#auditRegisterView .table-wrap {
+    overflow-x: auto;
+    max-width: 100%;
+    scrollbar-color: #bed0e8 #f3f7fd;
+}
+
+#auditRegisterView .editable-register {
+    width: 100%;
+    min-width: 1190px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 12px;
+}
+
+#auditRegisterView .editable-register th {
+    padding: 15px 12px;
+    background: #eaf2fd;
+    color: #34567e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid #c5d7ef;
+    line-height: 1.6;
+}
+
+#auditRegisterView .editable-register td {
+    padding: 11px 9px;
+    border-bottom: 1px solid #e6edf7;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+#auditRegisterView .editable-register tbody tr:hover td {
+    background: #f8fbff;
+}
+
+/* Editable cells */
+
+#auditRegisterView .editable-register input,
+#auditRegisterView .editable-register textarea {
+    width: 100%;
+    min-width: 0;
+    display: block;
+    border: 1px solid #d9e5f5;
+    border-radius: 9px;
+    background: #fbfdff;
+    color: var(--ink);
+    padding: 9px;
+    font-size: 12px;
+    line-height: 1.6;
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+#auditRegisterView .editable-register input:focus,
+#auditRegisterView .editable-register textarea:focus {
+    outline: 0;
+    border-color: #6e9eef;
+    box-shadow: 0 0 0 3px #2a6fde1f;
+    background: white;
+}
+
+#auditRegisterView .editable-register textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+#auditRegisterView .editable-register input[type="number"] {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Amounts and balances */
+
+#auditRegisterView .editable-register .balance-cell {
+    background: #f3f7fe;
+    font-weight: 800;
+    color: #215dbb;
+    padding-top: 21px;
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+#auditRegisterView .editable-register .money {
+    text-align: right;
+    font-weight: 700;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+#auditRegisterView .editable-register .nature {
+    white-space: pre-line;
+}
+
+/* Unsaved and invalid rows */
+
+#auditRegisterView .editable-register .dirty-row td {
+    background: #fffdf5;
+}
+
+#auditRegisterView .editable-register
+    .dirty-row:has(.row-state.error) td {
+    background: #fff0f2;
+}
+
+/* Totals */
+
+#auditRegisterView .editable-register tfoot td {
+    padding: 17px 12px;
+    background: #eaf2fd;
+    color: #214a85;
+    font-weight: 800;
+    border-top: 1px solid #cfddf0;
+    border-bottom: 0;
+}
+
+#auditRegisterView .editable-register tfoot td:first-child {
+    font-size: 11px;
+}
+
+/* Row actions */
+
+#auditRegisterView .cell-actions {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+#auditRegisterView .cell-actions button {
+    min-height: 26px;
+    padding: 3px 7px;
+    font-size: 10px;
+    border-radius: 6px;
+}
+
+#auditRegisterView .row-action {
+    color: #b23c4f;
+    background: white;
+    border-color: #efcad1;
+}
+
+#auditRegisterView .row-action:hover {
+    background: #fff0f2;
+    color: #a32640;
+    border-color: #e1a9b5;
+    box-shadow: none;
+}
+
+#auditRegisterView .row-state {
+    display: block;
+    font-size: 9px;
+    margin-top: 6px;
+    color: #6b829f;
+}
+
+#auditRegisterView .row-state.dirty {
+    color: #8e691f;
+}
+
+#auditRegisterView .row-state.error,
+#auditRegisterView .bad {
+    color: #b13b4b !important;
+}
+
+#auditRegisterView .minor {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+/* Voided entries and loading state */
+
+#auditRegisterView .voided {
+    color: #8794a7;
+}
+
+#auditRegisterView .voided td {
+    background: #f4f6fa;
+}
+
+#auditRegisterView .busy {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* Footer */
+
+#auditRegisterView .register-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    color: #7a8da7;
+    padding: 15px 24px;
+    background: #fcfdff;
+}
+
+#auditRegisterView .page-footer {
+    color: #8c9bb1;
+    font-size: 10px;
+    margin: 24px 0 0;
+}
+
+/* Large screens */
+
+@media (min-width: 1800px) {
+    #auditRegisterView .editable-register textarea {
+        min-height: 96px;
+    }
+
+    #auditRegisterView .register-heading {
+        padding-top: 26px;
+        padding-bottom: 22px;
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 1100px) {
+    #auditRegisterView .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    #auditRegisterView .register-heading {
+        gap: 15px;
+    }
+}
+
+/* Phones */
+
+@media (max-width: 760px) {
+    #auditRegisterView .page-heading h1 {
+        font-size: 25px;
+    }
+
+    #auditRegisterView .register-heading {
+        padding: 18px 16px;
+    }
+
+    #auditRegisterView .register-guide {
+        padding: 13px 16px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #auditRegisterView .register-footer {
+        padding: 14px 16px;
+    }
+
+    #auditRegisterView .table-toolbar {
+        gap: 7px;
+    }
+
+    #auditRegisterView .table-toolbar button {
+        font-size: 11px;
+        padding: 8px 11px;
+    }
+
+    #auditRegisterView .page-footer {
+        line-height: 1.7;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    #auditRegisterView * {
+        transition: none !important;
+    }
+}

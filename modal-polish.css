@@ -1,0 +1,69 @@
+/* Shared dialogs: loaded after legacy screen styles; print reports keep their styles. */
+html body[data-workspace-ui] :is(.modal[id],.swal2-popup){--dialog-bg:#ffffff;--dialog-soft:#f5f8fd;--dialog-ink:#183453;--dialog-muted:#62758d;--dialog-line:#d8e3f0;--dialog-field:#ffffff;--dialog-accent:#2563d9;--dialog-head:#edf3fc;--dialog-danger:#bd3654}
+html[data-theme=dark] body[data-workspace-ui] :is(.modal[id],.swal2-popup){--dialog-bg:#17263c;--dialog-soft:#122035;--dialog-ink:#e3ecfa;--dialog-muted:#a9bbd2;--dialog-line:#354b69;--dialog-field:#101e31;--dialog-accent:#8ab8ff;--dialog-head:#203654;--dialog-danger:#ff9bb0}
+html body[data-workspace-ui] .modal[id] .modal-content{background:var(--dialog-bg)!important;color:var(--dialog-ink)!important;border:1px solid var(--dialog-line)!important;border-radius:20px!important;box-shadow:0 24px 80px #081a3b38;overflow:hidden;--text-invert:var(--dialog-ink);--text-invert-muted:var(--dialog-muted)}
+html body[data-workspace-ui] .modal[id] .modal-content::before{display:none!important}
+html body[data-workspace-ui] .modal[id] .modal-header{background:var(--dialog-head)!important;border-bottom:1px solid var(--dialog-line)!important;padding:20px 24px;gap:16px;align-items:center}
+html body[data-workspace-ui] .modal[id] .modal-body{background:var(--dialog-bg)!important;color:var(--dialog-ink)!important;padding:24px;line-height:1.6}
+html body[data-workspace-ui] .modal[id] .modal-footer{background:var(--dialog-soft)!important;border-top:1px solid var(--dialog-line)!important;padding:16px 24px;gap:8px}
+html body[data-workspace-ui] .modal[id] :is(.modal-title,h1,h2,h3,h4,h5,h6,.text-main,.text-invert,label,.form-label){color:var(--dialog-ink)!important}
+html body[data-workspace-ui] .modal[id] .modal-title{font-size:17px!important;font-weight:750;line-height:1.4;letter-spacing:0!important;text-transform:none!important;overflow-wrap:anywhere}
+html body[data-workspace-ui] .modal[id] :is(.text-muted,.text-secondary,.text-invert-muted,.form-text,.modal-header-subtitle){color:var(--dialog-muted)!important}
+html body[data-workspace-ui] .modal[id] :is(.text-theme-gold,.modal-header i){color:var(--dialog-accent)!important}
+html body[data-workspace-ui] .modal[id] :is(.text-danger,.text-theme-crimson){color:var(--dialog-danger)!important}
+html body[data-workspace-ui] .modal[id] .btn-close{filter:none!important;opacity:.65;background-color:#ffffff;border-radius:50%;padding:10px;flex-shrink:0}
+html body[data-workspace-ui] .modal[id] .btn-close:hover{opacity:1}
+html body[data-workspace-ui] .modal[id] :is(.form-control,.form-select){background-color:var(--dialog-field)!important;color:var(--dialog-ink)!important;border:1px solid var(--dialog-line)!important;border-radius:10px;min-height:42px;font-size:14px}
+html body[data-workspace-ui] .modal[id] :is(.form-control,.form-select):focus{border-color:#6c9eea!important;box-shadow:0 0 0 3px #4c88e52b!important}
+html body[data-workspace-ui] .modal[id] .form-control::placeholder{color:var(--dialog-muted)!important;opacity:.85}
+html body[data-workspace-ui] .modal[id] textarea.form-control{min-height:100px;resize:vertical}
+html body[data-workspace-ui] .modal[id] .form-select{background-image:var(--bs-form-select-bg-img)}
+html[data-theme=dark] body[data-workspace-ui] .modal[id] .form-select{--bs-form-select-bg-img:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23c5d6ed' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")}
+html body[data-workspace-ui] .modal[id] :is(.bg-sub-panel,.unpaid-roster-panel,.category-card,.dropzone,.archive-roster-toolbar){background:var(--dialog-soft)!important;color:var(--dialog-ink)!important;border-color:var(--dialog-line)!important;border-radius:12px}
+html body[data-workspace-ui] .modal[id] :is(.dropzone .dz-title,.dropzone i,#categoryUnpaidTitle){color:var(--dialog-ink)!important}
+html body[data-workspace-ui] .modal[id] table{--bs-table-bg:var(--dialog-bg);--bs-table-color:var(--dialog-ink);--bs-table-border-color:var(--dialog-line);--bs-table-striped-bg:var(--dialog-soft);--bs-table-striped-color:var(--dialog-ink);--bs-table-hover-bg:var(--dialog-head);--bs-table-hover-color:var(--dialog-ink);background:var(--dialog-bg)!important;color:var(--dialog-ink)!important;border-color:var(--dialog-line)!important}
+html body[data-workspace-ui] .modal[id] thead th{background:var(--dialog-head)!important;color:var(--dialog-ink)!important;padding:13px 12px;border-color:var(--dialog-line)!important;font-size:11px;line-height:1.4}
+html body[data-workspace-ui] .modal[id] tbody td{background-color:var(--dialog-bg)!important;color:var(--dialog-ink);padding:12px;border-color:var(--dialog-line)!important;vertical-align:middle}
+html body[data-workspace-ui] .modal[id] tbody tr:nth-child(even) td{background-color:var(--dialog-soft)!important}
+html body[data-workspace-ui] .modal[id] table :is(.text-muted,label){color:var(--dialog-muted)!important}
+html body[data-workspace-ui] .modal[id] .btn{border-radius:10px;font-weight:650;min-height:38px;white-space:normal}
+html body[data-workspace-ui] .modal[id] .btn-gold{background:#2563d9!important;border-color:#2563d9!important;color:#fff!important}
+html body[data-workspace-ui] .modal[id] :is(.btn-outline-secondary,.btn-outline-gold){color:var(--dialog-ink)!important;border-color:var(--dialog-line)!important;background:transparent}
+html body[data-workspace-ui] .modal[id] .btn-outline-primary{color:var(--dialog-accent);border-color:var(--dialog-accent)}
+html body[data-workspace-ui] .modal[id] .btn:focus-visible,html body[data-workspace-ui] .modal[id] .btn-close:focus-visible{outline:3px solid #6c9eea;outline-offset:3px;box-shadow:none}
+/* Preserve the formatted money overlay used by the student payment editor. */
+html body[data-workspace-ui] .modal[id] #categoryUnpaidRows .financial-input-shell>.student-paid-input:not(:focus){color:transparent!important}
+html body[data-workspace-ui] .modal[id] #categoryUnpaidRows .financial-input-value{color:var(--dialog-ink)!important}
+html body[data-workspace-ui] .modal[id] .modal-icon-avatar{background:var(--dialog-bg)!important;border:1px solid var(--dialog-line);color:var(--dialog-accent)!important;border-radius:12px}
+html body[data-workspace-ui] .swal2-popup{background:var(--dialog-bg)!important;color:var(--dialog-ink)!important;border:1px solid var(--dialog-line)!important;border-radius:20px!important;padding:24px;box-shadow:0 24px 80px #081a3b38}
+html body[data-workspace-ui] .swal2-popup :is(.swal2-title,.swal2-html-container,.swal2-label){color:var(--dialog-ink)!important}
+html body[data-workspace-ui] .swal2-popup .swal2-title{font-size:21px;line-height:1.4}
+html body[data-workspace-ui] .swal2-popup :is(.swal2-input,.swal2-textarea,.swal2-select){background:var(--dialog-field)!important;color:var(--dialog-ink)!important;border:1px solid var(--dialog-line)!important;border-radius:10px}
+html body[data-workspace-ui] .swal2-popup .swal2-actions{gap:10px}
+html body[data-workspace-ui] .swal2-popup .swal2-styled{border-radius:10px!important;font-weight:650}
+html body[data-workspace-ui] .swal2-popup .swal2-confirm{background:#2563d9!important;color:#fff!important}
+html body[data-workspace-ui] .swal2-popup .swal2-cancel{background:var(--dialog-head)!important;color:var(--dialog-ink)!important}
+html body[data-workspace-ui] .swal2-popup .swal2-validation-message{background:var(--dialog-soft)!important;color:var(--dialog-danger)!important}
+@media(max-width:575px){html body[data-workspace-ui] .modal[id] .modal-dialog{margin:12px}html body[data-workspace-ui] .modal[id] :is(.modal-header,.modal-body){padding:18px}html body[data-workspace-ui] .modal[id] .modal-footer{padding:14px 18px}html body[data-workspace-ui] .modal[id] .modal-footer>.btn{flex:1 1 auto}}
+@media(prefers-reduced-motion:reduce){html body[data-workspace-ui] .modal.fade .modal-dialog{transition:none!important;transform:none!important}.swal2-popup{animation:none!important}}
+
+/* Form-style confirmation dialogs use aligned labels instead of inline fields. */
+html body[data-workspace-ui] .swal2-popup .swal2-html-container{line-height:1.6;font-size:14px}
+html body[data-workspace-ui] .swal2-popup .swal2-html-container>label{display:block;text-align:left;font-weight:650;margin-top:16px}
+html body[data-workspace-ui] .swal2-popup.item-schedule-dialog{padding:28px;max-width:calc(100vw - 32px)}
+html body[data-workspace-ui] .item-schedule-dialog .swal2-title{text-align:left;padding:0 40px 0 0;font-size:22px;font-weight:750}
+html body[data-workspace-ui] .item-schedule-dialog .swal2-close{color:var(--dialog-muted);width:40px;height:40px;top:14px;right:14px;border-radius:10px;font-size:28px}
+html body[data-workspace-ui] .item-schedule-dialog .swal2-html-container{margin:20px 0 0;text-align:left;overflow:visible}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-item{padding:14px 16px;border:1px solid var(--dialog-line);background:var(--dialog-soft);border-radius:12px;margin-bottom:22px}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-item span{display:block;color:var(--dialog-muted);font-size:10px;font-weight:750;letter-spacing:.08em;margin-bottom:5px}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-item strong{font-size:16px;font-weight:650;overflow-wrap:anywhere}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-date-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-field{min-width:0}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-field label{display:block;font-size:13px;font-weight:650;margin:0 0 8px}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-field .swal2-input{display:block;width:100%;min-width:0;box-sizing:border-box;margin:0;height:46px;padding:10px 12px;font-family:inherit;font-size:14px;box-shadow:none;color-scheme:light}
+html[data-theme=dark] body[data-workspace-ui] .item-schedule-dialog .schedule-field .swal2-input{color-scheme:dark}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-help{display:flex;gap:10px;align-items:flex-start;color:var(--dialog-muted);font-size:12px;line-height:1.7;margin-top:18px}
+html body[data-workspace-ui] .item-schedule-dialog .schedule-help i{color:var(--dialog-accent);margin-top:1px}
+html body[data-workspace-ui] .item-schedule-dialog .swal2-actions{justify-content:flex-end;width:100%;margin:24px 0 0;padding-top:18px;border-top:1px solid var(--dialog-line)}
+html body[data-workspace-ui] .item-schedule-dialog .swal2-styled{margin:0;min-height:42px;padding:10px 20px;font-size:13px}
+@media(max-width:480px){html body[data-workspace-ui] .swal2-popup.item-schedule-dialog{padding:22px}html body[data-workspace-ui] .item-schedule-dialog .schedule-date-grid{grid-template-columns:1fr}html body[data-workspace-ui] .item-schedule-dialog .swal2-actions{display:flex}}

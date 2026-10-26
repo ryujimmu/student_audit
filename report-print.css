@@ -1,0 +1,5 @@
+/* Logo placement only; the original report table and page styles are retained. */
+.report-paper .header{position:relative;padding-left:68px;padding-right:68px;min-height:60px}
+.report-paper .report-logo{position:absolute;top:0;width:68px;height:68px;object-fit:contain}
+.report-paper .report-logo-nisu{left:max(4px, calc(50% - 240px))}.report-paper .report-logo-cics{right:max(4px, calc(50% - 240px))}
+body[data-workspace-ui] .modal .report-paper .header h3{color:#153765!important}
